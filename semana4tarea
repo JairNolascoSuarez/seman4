@@ -1,0 +1,74 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = "Hello, playground"
+var valor : Int = 0
+var cadena : String
+
+//: Playground - noun: a place where people can playg
+import UIKit
+
+//var str = "Hello, playground"
+
+enum Velocidades : Int {
+    case Apagado = 0,VelocidadBaja = 20,VelocidadMedia = 50 ,  VelocidadAlta = 120
+    
+
+    init(){
+    self = .Apagado
+    }
+    
+    
+}
+
+
+//print(" ejempo", (Velocidades.VelocidadAlta.rawValue))
+
+
+
+class Auto {
+    var velocidad = Velocidades.self
+    
+    init() {
+        velocidad.init()
+        
+    }
+
+    
+    func cambioDeVelocidad (vel : Int) -> ( actual : Int, velocidadEnCadena: String){
+Velocidades.Apagado
+        
+        switch vel {
+        case 0:
+            return (velocidad.VelocidadBaja.rawValue, "VelocidadBaja")
+        case 20:
+            return (velocidad.VelocidadMedia.rawValue, "VelocidadMedia")
+        case 50:
+            return (velocidad.VelocidadAlta.rawValue, "VelocidadAlta")
+        case 120:
+            return (velocidad.Apagado.rawValue, "Apagado")
+        default:
+            return (velocidad.Apagado.rawValue, "Apagado")
+        }
+  
+    }
+}
+
+var micarro = Auto()
+
+micarro.velocidad
+
+micarro.velocidad.Apagado
+
+for indice in 1 ... 20
+    {
+     
+        valor = micarro.cambioDeVelocidad(valor).actual
+        cadena = micarro.cambioDeVelocidad(valor).velocidadEnCadena
+        print("\(indice).- \(micarro.cambioDeVelocidad(valor).actual ) , \(micarro.cambioDeVelocidad(valor).velocidadEnCadena)"  )
+        
+
+}
+
+
