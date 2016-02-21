@@ -47,7 +47,7 @@
 		22C903BC1C7A79C200543FF4 /* week_4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week_4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C903C01C7A79C200543FF4 /* week_4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week_4UITests.swift; sourceTree = "<group>"; };
 		22C903C21C7A79C200543FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22C903CE1C7A79E600543FF4 /* week4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = week4.playground; path = week_4/week4.playground; sourceTree = "<group>"; };
+		22C903CE1C7A79E600543FF4 /* week4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = week4.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,6 @@
 		22C903941C7A79C100543FF4 = {
 			isa = PBXGroup;
 			children = (
-				22C903CE1C7A79E600543FF4 /* week4.playground */,
 				22C9039F1C7A79C100543FF4 /* week_4 */,
 				22C903B41C7A79C200543FF4 /* week_4Tests */,
 				22C903BF1C7A79C200543FF4 /* week_4UITests */,
@@ -99,6 +98,7 @@
 		22C9039F1C7A79C100543FF4 /* week_4 */ = {
 			isa = PBXGroup;
 			children = (
+				22C903CE1C7A79E600543FF4 /* week4.playground */,
 				22C903A01C7A79C200543FF4 /* AppDelegate.swift */,
 				22C903A21C7A79C200543FF4 /* ViewController.swift */,
 				22C903A41C7A79C200543FF4 /* Main.storyboard */,
@@ -485,6 +485,7 @@
 				22C903C71C7A79C200543FF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22C903C81C7A79C200543FF4 /* Build configuration list for PBXNativeTarget "week_4Tests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				22C903CA1C7A79C200543FF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22C903CB1C7A79C200543FF4 /* Build configuration list for PBXNativeTarget "week_4UITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				22C903CD1C7A79C200543FF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
