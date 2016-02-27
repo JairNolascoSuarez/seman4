@@ -12,11 +12,14 @@ import UIKit
 //var str = "Hello, playground"
 
 enum Velocidades : Int {
-    case Apagado = 0,VelocidadBaja = 20,VelocidadMedia = 50 ,  VelocidadAlta = 120
+    case apagado = 0
+    case velocidadBaja = 20
+    case velocidadMedia = 50
+    case velocidadAlta = 120
     
 
-    init(){
-    self = .Apagado
+    init(VelocidadIni : Velocidades){
+    self = VelocidadIni
     }
     
     
@@ -28,29 +31,33 @@ enum Velocidades : Int {
 
 
 class Auto {
-    var velocidad = Velocidades.self
+    var velocidad : Velocidades
     
     init() {
-        velocidad.init()
-        
+        self.velocidad = Velocidades(VelocidadIni: .apagado)
     }
 
     
-    func cambioDeVelocidad (vel : Int) -> ( actual : Int, velocidadEnCadena: String){
-Velocidades.Apagado
+    func cambioDeVelocidad () -> ( actual : Int, velocidadEnCadena: String){
+
         
-        switch vel {
-        case 0:
-            return (velocidad.VelocidadBaja.rawValue, "VelocidadBaja")
-        case 20:
-            return (velocidad.VelocidadMedia.rawValue, "VelocidadMedia")
-        case 50:
-            return (velocidad.VelocidadAlta.rawValue, "VelocidadAlta")
-        case 120:
-            return (velocidad.Apagado.rawValue, "Apagado")
-        default:
-            return (velocidad.Apagado.rawValue, "Apagado")
+        switch self.velocidad {
+        case .apagado:
+            self.velocidad = .velocidadBaja
+            return (velocidad.self.rawValue, "VelocidadBaja")
+        case .velocidadBaja:
+            self.velocidad = .velocidadMedia
+            return (velocidad.self.rawValue, "VelocidadMedia")
+        case .velocidadMedia:
+            self.velocidad = .velocidadAlta
+            return (velocidad.self.rawValue, "VelocidadAlta")
+        case .velocidadAlta:
+            self.velocidad = .apagado
+            return (velocidad.self.rawValue, "Apagado")
+
         }
+        
+        
   
     }
 }
@@ -59,16 +66,14 @@ var micarro = Auto()
 
 micarro.velocidad
 
-micarro.velocidad.Apagado
 
 for indice in 1 ... 20
     {
      
-        valor = micarro.cambioDeVelocidad(valor).actual
-        cadena = micarro.cambioDeVelocidad(valor).velocidadEnCadena
-        print("\(indice).- \(micarro.cambioDeVelocidad(valor).actual ) , \(micarro.cambioDeVelocidad(valor).velocidadEnCadena)"  )
+        //valor = micarro.cambioDeVelocidad().actual
+        //cadena = micarro.cambioDeVelocidad().velocidadEnCadena
+        var r = micarro.cambioDeVelocidad()
+        print("\(indice).- \(r.actual ) , \(r.velocidadEnCadena)"  )
         
 
 }
-
-
